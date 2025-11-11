@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -6,6 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="DomainErrors.fs" />
+    <Compile Include="Drug.fs" />
+    <Compile Include="ContactInfo.fs" />
+    <Compile Include="Person.fs" />
+    <Compile Include="Sales.fs" />
+    <Compile Include="Packaging.fs" />
+    <Compile Include="DrugSku.fs" />
+    <Compile Include="Product.fs" />
+    <Compile Include="ProductQuantity.fs" />
+    <Compile Include="Invoice.fs" />
+    <Compile Include="InventoryAndStockManagement.fs" />
     <Compile Include="Library.fs" />
   </ItemGroup>
 
