@@ -1,4 +1,4 @@
-module DomainErrors
+module PharmacyCore.DomainErrors
 
 /// Failure to validate a business rule.
 type BusinessRuleValidationError = { RuleId: string; Message: string }

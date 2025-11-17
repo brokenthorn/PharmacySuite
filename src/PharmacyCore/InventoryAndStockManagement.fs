@@ -3,6 +3,6 @@
 /// Core Domain: Tracking stock levels, managing expiry dates, generating
 /// low-stock alerts.
 /// Key Aggregates: StockItem, WarehouseLot, StockAdjustment.
-module InventoryAndStockManagement
+module PharmacyCore.InventoryAndStockManagement
 
 ()

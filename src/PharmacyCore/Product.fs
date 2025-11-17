@@ -1,8 +1,8 @@
 // TODO: create a mapping function that derives the prices at each level for a
 // given ProductPackaging, mimicking the same kind of structure, but adding a
 // price field. Should be part of the pricing or sales and checkout module.
-//
-module Product
+
+module PharmacyCore.Product
 
 type Id = Id of string
 

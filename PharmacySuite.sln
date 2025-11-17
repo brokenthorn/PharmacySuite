@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PharmacyCore", "src\PharmacyCore\PharmacyCore.fsproj", "{BD5F6526-F711-4CA9-803A-D46F0895D955}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PharmacyCore.Tests", "src\PharmacyCore.Tests\PharmacyCore.Tests.fsproj", "{00210AF6-6A45-4E62-9227-7F3D7C458020}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +31,24 @@ Global
 		{BD5F6526-F711-4CA9-803A-D46F0895D955}.Release|x64.Build.0 = Release|Any CPU
 		{BD5F6526-F711-4CA9-803A-D46F0895D955}.Release|x86.ActiveCfg = Release|Any CPU
 		{BD5F6526-F711-4CA9-803A-D46F0895D955}.Release|x86.Build.0 = Release|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Debug|x64.Build.0 = Debug|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Debug|x86.Build.0 = Debug|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Release|x64.ActiveCfg = Release|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Release|x64.Build.0 = Release|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Release|x86.ActiveCfg = Release|Any CPU
+		{00210AF6-6A45-4E62-9227-7F3D7C458020}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BD5F6526-F711-4CA9-803A-D46F0895D955} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{00210AF6-6A45-4E62-9227-7F3D7C458020} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal

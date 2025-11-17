@@ -1,7 +1,7 @@
 /// # Drug Module
 /// Defines the intrinsic properties of the finished pharmaceutical product.
 /// These properties (Formulation and Strength) are immutable characteristics of the drug unit itself.
-module Drug
+module PharmacyCore.Drug
 
 /// Defines the physical form of the drug.
 type Formulation =

@@ -1,5 +1,5 @@
 /// Person module (describes a physical person).
-module Person
+module PharmacyCore.Person
 
 /// The unique ID of the Person.
 type Id = PersonId of string

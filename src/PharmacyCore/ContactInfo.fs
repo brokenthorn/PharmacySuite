@@ -1,5 +1,5 @@
 /// Contact information module.
-module ContactInfo
+module PharmacyCore.ContactInfo
 
 /// Phone number.
 type PhoneNumber = PhoneNumber of string

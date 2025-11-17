@@ -1,7 +1,7 @@
 /// # SKU Module
 /// Defines the recursive data structure for the pharmaceutical Stock Keeping Unit (SKU).
 /// The SKU ties the Product Unit to its full nested packaging profile (Primary, Secondary, and Tertiary levels).
-module DrugSku
+module PharmacyCore.DrugSku
 
 /// Represents the innermost packaging level that holds the actual drug units.
 /// This is the termination point of the PackagingLevel type recursion.

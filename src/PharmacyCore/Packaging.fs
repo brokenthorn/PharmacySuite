@@ -1,6 +1,6 @@
 /// # Packaging Module
 /// Defines the generic container types used to assemble the packaging profile.
-module Packaging
+module PharmacyCore.Packaging
 
 /// Represents the type of container.
 /// The name should be unique and descriptive, such as "Blister", or "Vial".
