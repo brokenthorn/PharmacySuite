@@ -1,6 +1,11 @@
 namespace PharmacyCore.Sales
 
+/// <summary>
+/// Money Module (Sales).
+/// </summary>
+/// <remarks>
 /// Implements money types (currencies) and associated functionality, in the context of sales.
+/// </remarks>
 module Money =
   /// <summary>
   /// Remove the unit off a decimal monetary value of any currency.

@@ -1,15 +1,18 @@
-// TODO: create a mapping function that derives the prices at each level for a
-// given ProductPackaging, mimicking the same kind of structure, but adding a
-// price field. Should be part of the pricing or sales and checkout module.
+namespace PharmacyCore.Product
 
-module PharmacyCore.Product
+/// <summary>
+/// ParaPharmaceutical Product Module.
+/// </summary>
+/// <remarks>
+/// Implements the parapharmaceutical product types and associated functionality.
+/// </remarks>
+module ParaPharmaceutical =
+  type Id = Id of string
 
-type Id = Id of string
-
-type T =
-  { Id: Id
-    Name: string
-    ProductPackaging: DrugSku.T }
+  type T =
+    { Id: Id
+      Name: string
+      ProductPackaging: string }
 
 
 // module Product =
