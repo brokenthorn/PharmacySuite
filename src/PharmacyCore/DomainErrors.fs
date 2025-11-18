@@ -1,5 +1,6 @@
 namespace PharmacyCore
 
+/// Generic domain errors.
 module DomainErrors =
   /// Failure to validate a business rule.
   type BusinessRuleValidationError = { RuleId: string; Message: string }
