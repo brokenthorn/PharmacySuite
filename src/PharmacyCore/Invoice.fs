@@ -1,14 +1,14 @@
 /// Invoice module.
 module PharmacyCore.Invoice
 
-open PharmacyCore.Product
+open PharmacyCore.Products
 
 // Unique ID of the Invoice, which for our invoices it's the invoice's number.
 type InvoiceId = { InvoiceNumber: string }
 
 type ProductRef =
   | Drug of {| CimCode: Drug.CimCode |}
-  | ParaPharmaceutical of {| Id: ParaPharmaceutical.Id |}
+  | ParaPharmaceutical of {| Id: Product.Sku.Id |}
 
 // A line item inside an Invoice.
 type InvoiceItem =

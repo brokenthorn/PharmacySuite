@@ -1,4 +1,4 @@
-namespace PharmacyCore.Product
+namespace PharmacyCore.Products
 
 /// # Packaging Module
 /// Defines the generic container types used to assemble the packaging profile.

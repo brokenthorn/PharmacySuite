@@ -73,3 +73,6 @@ module Money =
       let lei = Decimal.Truncate value
       let bani = Decimal.Remainder(value, 1M) * 100M
       lei, Decimal.Round bani
+
+  /// Money (currency) type union.
+  type T = RON of RON.T
