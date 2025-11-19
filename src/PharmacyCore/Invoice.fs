@@ -1,7 +1,7 @@
 /// Invoice module.
 module PharmacyCore.Invoice
 
-open PharmacyCore.Products
+open PharmacyCore.Sales
 
 // Unique ID of the Invoice, which for our invoices it's the invoice's number.
 type InvoiceId = { InvoiceNumber: string }

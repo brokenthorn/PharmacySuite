@@ -1,4 +1,4 @@
-namespace PharmacyCore.Products
+namespace PharmacyCore.Sales
 
 /// <summary>
 /// Drug Product Module.
@@ -127,14 +127,14 @@ module Drug =
         PackagingType: Packaging.T
         InnerLevel: PackagingLevel }
 
-    type SkuId = SkuId of string
+    type Id = Id of string
 
     /// The Drug Stock Keeping Unit (SKU) data structure.
     /// This trade item identifier encapsulates the drug, strength, quantity, and full packaging profile.
     type T =
       {
         /// The unique identifier for stock and trade, often a Global Trade Item Number (GTIN).
-        Id: SkuId
+        Id: Id
         /// The brand or proprietary name of the product.
         TradeName: string
         /// The complete packaging definition, starting at the outermost level for this SKU.

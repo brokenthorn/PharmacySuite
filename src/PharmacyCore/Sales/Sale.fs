@@ -4,7 +4,7 @@ open PharmacyCore.Sales
 
 /// Line item for non-prescription drug products, i.e., OTC medication and parapharmaceuticals.
 module ProductLineItem =
-  open PharmacyCore.Products
+  open PharmacyCore.Sales
 
   type T =
     { Order: uint32

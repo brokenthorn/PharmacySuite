@@ -1,4 +1,4 @@
-namespace PharmacyCore.Products
+namespace PharmacyCore.Sales
 
 /// <summary>
 /// Product Module.
