@@ -101,7 +101,7 @@ module Drug =
     type PrimaryPackaging =
       {
         /// The container that is in direct contact with the drug unit, such as "Blister", or "Bottle".
-        PackagingType: Packaging.T
+        Packaging: Packaging.T
         /// The definition of the drug unit contained within.
         /// E.g.: pill with 2 milligrams of active substance.
         ConsumableUnit: ConsumableUnit.T
@@ -124,7 +124,7 @@ module Drug =
     /// This is the recursive part of the structure.
     and Container =
       { Quantity: uint32
-        PackagingType: Packaging.T
+        Packaging: Packaging.T
         InnerLevel: PackagingLevel }
 
     type Id = Id of string
