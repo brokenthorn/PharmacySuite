@@ -15,6 +15,10 @@
     <Compile Include="Sales\Drug.fs" />
     <Compile Include="Sales\Sale.fs" />
 
+    <Compile Include="Stocks\DrugStock.fs" />
+    <Compile Include="Stocks\ProductStock.fs" />
+    <Compile Include="Stocks\StockManagementService.fs" />
+
     <Compile Include="ContactInfo.fs" />
     <Compile Include="Person.fs" />
 

@@ -2,7 +2,6 @@ namespace PharmacyCore.Sales
 
 /// # Packaging Module
 /// Defines the generic container types used to assemble the packaging profile.
-
 module Packaging =
   open PharmacyCore
 

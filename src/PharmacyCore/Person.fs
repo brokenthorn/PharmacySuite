@@ -2,7 +2,7 @@
 module PharmacyCore.Person
 
 /// The unique ID of the Person.
-type Id = PersonId of string
+type Id = Id of string
 
 /// A physical person.
 type T =
