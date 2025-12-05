@@ -73,6 +73,7 @@ module Drug =
       { Formulation: Formulation
         Strength: Strength.T }
 
+    /// Create a new ConsumableUnit.
     let create formulation strength =
       match formulation with
       | Other name when String.length name < 2 ->
@@ -96,38 +97,34 @@ module Drug =
   /// the required quantity.
   /// </remarks>
   module Sku =
-    /// Represents the innermost packaging level that holds the actual drug units.
-    /// This is the termination point of the PackagingLevel type recursion.
-    type PrimaryPackaging =
-      {
-        /// The container that is in direct contact with the drug unit, such as "Blister", or "Bottle".
-        Packaging: Packaging.T
-        /// The definition of the drug unit contained within.
-        /// E.g.: pill with 2 milligrams of active substance.
-        ConsumableUnit: ConsumableUnit.T
-        /// The number of ConsumableUnits contained within this primary package.
-        Quantity: uint32
-      }
-
-    /// Defines the hierarchy of packaging levels recursively, starting from the outside-in.
-    /// The definition starts at the outermost level (.e.g.,Tertiary or Secondary) and nests inward.
-    type PackagingLevel =
-      /// A Container holds one or more items of the next inner level.
-      /// For the next inner level to stop the recursion, it must be of the variant
-      /// PrimaryPackaging.
-      | Container of Container
-      /// The PrimaryPackaging is the absolute innermost level, i.e. the primary packaging.
-      /// It terminates the recursion of PackagingLevel's by describing the
+    /// <summary>Defines the packaging profile of the Drug SKU.</summary>
+    /// <remarks>
+    /// The packaging profile is a hierarchy of packaging levels, defined recursively.
+    /// The definition starts from the outermost level (.e.g., secondary or tertiary packaging) and goes inwards.
+    /// The recursion stops once the PackagingProfile is of the variant PrimaryPackaging.
+    /// </remarks>
+    type PackagingProfile =
+      | SecondaryPackaging of SecondaryPackaging
       | PrimaryPackaging of PrimaryPackaging
 
-    /// Represents all packaging levels outside the primary packaging (Tertiary, Secondary).
-    /// This is the recursive part of the structure.
-    and Container =
-      { Quantity: uint32
-        Packaging: Packaging.T
-        InnerLevel: PackagingLevel }
+    /// Secondary or tertiary packaging that does not contact the drug directly.
+    /// E.g.: 1 box.
+    and SecondaryPackaging =
+      { PackagingCount: uint32
+        PackagingType: Packaging.T
+        PackagingProfile: PackagingProfile }
 
-    type Id = Id of string
+    /// Primary packaging that contacts the drug directly and protects it.
+    /// E.g.: 2 blisters, with 10 pills each.
+    and PrimaryPackaging =
+      { PackagingCount: uint32
+        PackagingType: Packaging.T
+        ConsumableUnitQuantity: uint32
+        ConsumableUnit: ConsumableUnit.T }
+
+    type Id = Id of System.Guid
+
+    let newId () = System.Guid.CreateVersion7()
 
     /// The Drug Stock Keeping Unit (SKU) data structure.
     /// This trade item identifier encapsulates the drug, strength, quantity, and full packaging profile.
@@ -135,8 +132,8 @@ module Drug =
       {
         /// The unique identifier for stock and trade, often a Global Trade Item Number (GTIN).
         Id: Id
-        /// The brand or proprietary name of the product.
+        /// The brand or proprietary name of the product SKU.
         TradeName: string
         /// The complete packaging definition, starting at the outermost level for this SKU.
-        PackagingProfile: PackagingLevel
+        PackagingProfile: PackagingProfile
       }

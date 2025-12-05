@@ -5,5 +5,5 @@ namespace PharmacyCore.Stocks
 // Maybe it simplifies stock tracking. Also for normal products, we can use a single-level
 // packaging using the same packaging domain model.
 
-module ProductStock =
-  ()
+// module ProductStock =
+//   ()
