@@ -1,5 +1,15 @@
 namespace PharmacyCore.Sales
 
+// TODO: consider creating a new namespace PharmacyCore.Product and rename the Product module below to
+// ParaPharmaceutical and move it to the new namespace, along with Drug and Packaging.
+//
+// Then the rest of the modules remaining and now more aligned with the sales domain.
+//
+// Also, consider if the Sku submodules (Drug,Product/ParaPharmaceutical) should still be part of the Product NS, Sales
+// NS or, maybe the Stock NS. Currently, I'm leaning towards the Stock NS. SKU (Stock Keeping Unit) is a model that
+// depends a lot of how you want to keep/record an item in stock. Take the old Microsoft example for modeling SKUs: you
+// have the Windows product, with several SKUs: Windows 2000, Windows XP, etc. The product has no knowledge of SKUs.
+
 /// <summary>
 /// Product Module.
 /// </summary>
