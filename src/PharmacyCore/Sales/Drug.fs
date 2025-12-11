@@ -51,7 +51,7 @@ module Drug =
     /// Create a new Strength.
     let create value unit =
       match value with
-      | value when value <= 0 ->
+      | value when value <= 0.0 ->
         Error(
           { EntityName = "Strength"
             Message = "The active substance strength must be positive" }
