@@ -4,11 +4,11 @@ open PharmacyCore.Sales
 
 /// Line item for non-prescription drug products, i.e., OTC medication and parapharmaceuticals.
 module ProductLineItem =
-  open PharmacyCore.Sales
+  open PharmacyCore.Products
 
   type T =
     { Order: uint32
-      SkuId: Product.Sku.T
+      SkuId: ParaPharmaceutical.Sku.T
       // TODO: How are we going to model line item quantities?
       Quantity: uint32
       Price: Money.T }

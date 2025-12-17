@@ -9,12 +9,14 @@
   <ItemGroup>
     <Compile Include="DomainErrors.fs" />
 
+    <Compile Include="Products\Packaging.fs" />
+    <Compile Include="Products\ParaPharmaceutical.fs" />
+    <Compile Include="Products\Drug.fs" />
+
     <Compile Include="Sales\Money.fs" />
-    <Compile Include="Sales\Packaging.fs" />
-    <Compile Include="Sales\Product.fs" />
-    <Compile Include="Sales\Drug.fs" />
     <Compile Include="Sales\Sale.fs" />
 
+    <Compile Include="Stocks\Sku.fs" />
     <Compile Include="Stocks\DrugStock.fs" />
     <Compile Include="Stocks\ProductStock.fs" />
     <Compile Include="Stocks\StockManagementService.fs" />

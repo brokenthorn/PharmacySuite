@@ -8,7 +8,7 @@ type InvoiceId = { InvoiceNumber: string }
 
 type ProductRef =
   | Drug of {| CimCode: Drug.CimCode |}
-  | ParaPharmaceutical of {| Id: Product.Sku.Id |}
+  | ParaPharmaceutical of {| Id: ParaPharmaceutical.Sku.Id |}
 
 // A line item inside an Invoice.
 type InvoiceItem =
